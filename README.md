@@ -81,7 +81,7 @@ http://localhost:5173
 
 ## 📸 Screenshots
 
-You can add screenshots here after uploading them.
+
 
 ## 🎯 Upcoming Features
 
@@ -113,8 +113,7 @@ Feel free to fork the repository and submit a pull request.
 
 ## 📜 License
 
-This project is licensed under the MIT License.
 
 ---
 
-Made with ❤️ by **Alekh Thakur**
+Made with ❤️ by **Alekh**
