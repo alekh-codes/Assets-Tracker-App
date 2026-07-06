@@ -37,8 +37,5 @@ export const options =[
         option:"Assigned",
         value:"Assigned"
     },
-    {
-        option:"Retired",
-        value:"Retired"
-    }
+    
 ]
