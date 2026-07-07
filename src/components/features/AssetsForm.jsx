@@ -11,6 +11,9 @@ export default function AssetsForm({setShow}){
         department:"",
         status:"",
     })
+
+    
+
     const handleChange = (e) =>{
       
         setFormData({
@@ -32,7 +35,7 @@ export default function AssetsForm({setShow}){
         setShow(false)
     }
     return(
-        <div className="fixed inset-0 bg-black/50 flex justify-center items-center">
+        <div className="fixed inset-0 z-10 bg-black/50 flex justify-center items-center">
             <div className="bg-white p-5 w-140 rounded-xl text-black">                                  
                 <div className="flex items-center justify-between">
                     <h1 className="text-2xl text-center text-[#554cfe] font-bold">Add Asset</h1>

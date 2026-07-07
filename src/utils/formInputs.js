@@ -30,8 +30,8 @@ export const options =[
         value:"Available",
     },
     {
-        option:"In Repair",
-        value:"In Repair"
+        option:"Repair",
+        value:"Repair"
     },
     {
         option:"Assigned",
