@@ -10,12 +10,8 @@ export default function AssetsForm({setShow}){
         category:"",
         department:"",
         status:"",
-    })
-
-    
-
-    const handleChange = (e) =>{
-      
+    })   
+    const handleChange = (e) =>{      
         setFormData({
             ...formData,
             [e.target.name]:e.target.value
@@ -29,9 +25,7 @@ export default function AssetsForm({setShow}){
             category:"",
             department:"",
             status:"",
-        })
-        
-        
+        })        
         setShow(false)
     }
     return(
