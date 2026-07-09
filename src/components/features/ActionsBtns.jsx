@@ -8,7 +8,7 @@ function ActionsBtns({menuRef,active,setActive,deleteItem,index}) {
       />
 
       {active === index && (
-        <div className="absolute top-8 right-0 z-10 bg-white text-black rounded-xl shadow-lg p-2">
+        <div className="absolute top-5 left-9 z-10 bg-white text-black rounded-xl shadow-lg p-2">
           <ul className="flex gap-2">
             <li className="text-xl cursor-pointer">
               <RiPencilLine />

@@ -4,22 +4,12 @@ import { AssetContext } from "../../context/AssetContext";
 
 import MobileTable from "./MobileTable";
 import TableContent from "./TableContent";
+import useClickOutside from "../../utils/useClickOutside";
 function Table({copyList}) {
   const [active, setActive] = useState(null);
   const { asset, setAssets } = useContext(AssetContext);
   const menuRef = useRef(null);
-
-  useEffect(() => {
-    function handleClick(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setActive(null);
-      }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
-    };
-  }, []);
+  useClickOutside(menuRef,()=>setActive(null))
 
   const deleteItem = (index) => {
     setAssets((prev) => prev.filter((item, i) => i !== index));
@@ -38,7 +28,7 @@ function Table({copyList}) {
   </div> 
   <TableContent asset={copyList} setActive={setActive} active={active} menuRef={menuRef}  deleteItem={deleteItem} setAssets={setAssets}/>
     </div>
-    <MobileTable asset={asset} setActive={setActive} active={active} menuRef={menuRef} deleteItem={deleteItem} />
+    <MobileTable asset={copyList} setActive={setActive} active={active} menuRef={menuRef} deleteItem={deleteItem} />
     </div>
     
   )

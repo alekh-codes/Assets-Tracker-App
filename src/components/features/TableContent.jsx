@@ -1,7 +1,7 @@
 import ActionsBtns from "./ActionsBtns";
 function TableContent({ asset, menuRef, active, setActive, deleteItem}) {
   return asset.length === 0 ? (
-    <h1 className="mt-4 text-white/50 text-center">No data found</h1>
+    <h1 className="mt-4 text-white/50 text-center">No record added</h1>
   ) : (
     <>
       {asset.map((item, index) => (

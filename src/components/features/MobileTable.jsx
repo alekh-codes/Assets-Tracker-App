@@ -2,7 +2,7 @@ import ActionsBtns from "./ActionsBtns";
 
 const MobileTable = ({ asset, menuRef, deleteItem, active, setActive }) => {
   return asset.length === 0 ? (
-    <h1 className="mt-4 text-white/50 text-center md:hidden">No data found</h1>
+    <h1 className="mt-4 text-white/50 text-center md:hidden">No record added</h1>
   ) : (
     <>
       <div className="block md:hidden h-100 border-2 p-5 mt-5 rounded-2xl overflow-y-scroll border-white">
