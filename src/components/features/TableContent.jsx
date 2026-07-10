@@ -7,7 +7,7 @@ function TableContent({ asset, menuRef, active, setActive, deleteItem}) {
       {asset.map((item, index) => (
         <div
           key={index}
-          className="grid grid-cols-[0.8fr_3fr_2fr_2fr_2fr_0.8fr] items-center px-4 py-3 mt-3 border border-white/10 rounded-xl"
+          className="grid grid-cols-[2fr_3fr_3fr_3fr_2fr_1fr] items-center px-4 py-3 mt-3 border border-white/10 rounded-xl"
         >
           <p>PD{index + 1}</p>
           <p>{item.assets}</p>

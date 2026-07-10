@@ -13,7 +13,7 @@ function Cards(){
             {
                 cardsList.map(item=>(
                     <div 
-                    className={`p-2 border border-white/20 text-left w-full m-2 md:w-50 shadow-md rounded-xl mx-10 bg-[${item.bg}]`}
+                    className={`p-2 border border-white/20 text-left w-full  shadow-md rounded-xl  m-2 md:mx-2 bg-[${item.bg}]`}
                     key={item.id}>
                         <h1 className={`text-[16px] font-bold 
                             ${item.name === "Assigned" ? "text-amber-200":

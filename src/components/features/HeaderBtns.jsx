@@ -16,7 +16,7 @@ export default function HeaderBtns({ setCopyList, copyList, asset }) {
   const [search, setSearch] = useState("");
   const menuRef = useRef(null);
     useClickOutside(menuRef,()=>setDisplay(null))
-  const stlyebtns = " relative p-1 bg-white text-black m-2 rounded-xl flex items-center gap-1 transition-all ease-in duration-300 hover:bg-black hover:text-white";
+  const stlyebtns = " ";
   function handleSearch() {
     setCopyList(
       asset.filter(
@@ -32,7 +32,7 @@ export default function HeaderBtns({ setCopyList, copyList, asset }) {
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-      <div className="flex items-center w-fit  px-4 bg-blue-600 text-white p-1 rounded-[30px]">
+      <div className="flex items-center w-fit  px-4 bg-blue-600 text-white p-1 rounded-[30px] transition-all ease-in duration-300 hover:bg-blue-800">
         <RiAddLine />
         <button onClick={() => setShow(true)} className="cursor-pointer">
           {" "}
@@ -60,19 +60,17 @@ export default function HeaderBtns({ setCopyList, copyList, asset }) {
         <div className="flex justify-around mx-6">
           <button
           onClick={()=>setDisplay(true)}
-          className={stlyebtns}>
+          className="relative p-1 font-bold cursor-pointer bg-blue-600  m-2 rounded-xl flex items-center gap-1 transition-all ease-in duration-300 hover:bg-blue-800">
             
-            <RiSortAsc />
+            Sort<RiSortAsc />
           </button>
           {
             display && <SortDropDown
             menuRef={menuRef}
+            setCopyList={setCopyList}
             />
           }
-          <button className={stlyebtns}>
-            
-            <RiFilterLine />
-          </button>
+          
         </div>
       </div>
     </div>
