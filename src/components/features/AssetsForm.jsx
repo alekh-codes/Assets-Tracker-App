@@ -79,13 +79,13 @@ export default function AssetsForm({setShow,editingAsset}){
                     className="text-xl font-bold"
                     htmlFor="">Select a Status</label>
                 <select 
-                    className="text-xs md:text-[17px] mt-3"
+                    className="text-[15px] md:text-[17px] mt-3"
                     name="status" value={formData.status} onChange={handleChange} >
                     <option hidden disabled value="">Select Status</option>
                     {
                         options.map(item=>(
                         <option 
-                        className=""
+                        className="text-[11px] md:text-[15px]"
                         key={item.value} value={item.value}>{item.option}</option>
                     
                         ))

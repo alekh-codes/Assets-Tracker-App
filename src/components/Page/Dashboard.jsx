@@ -15,7 +15,7 @@ function Dashboard() {
   return (
     <div className="flex justify-center items-center min-h-screen p-6">
       <div
-        className="rounded-xl bg-white/10 backdrop-blur-xl p-6
+        className="rounded-xl bg-white/10 backdrop-blur-xl p-6 mx-6
             shadow-[3px_3px_35px_2px_rgba(0,0,0,0.3)] border border-white/20 flex 
             flex-col text-white w-100  md:w-190 lg:w-250"
       >

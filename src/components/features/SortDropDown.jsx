@@ -18,7 +18,7 @@ function SortDropDown({setCopyList,setDisplay}){
     }
 
     return(
-        <div className="absolute flex flex-col bg-white text-black z-10  shadow-2xl md:top-10 py-1 px-2 rounded-xl">
+        <div className="absolute flex flex-col bg-white text-black z-10 top-10 shadow-2xl md:top-10 py-1 px-2 rounded-xl">
             <button className={sortBtns}
             onClick={handleSortDefault}
             >Default</button>
