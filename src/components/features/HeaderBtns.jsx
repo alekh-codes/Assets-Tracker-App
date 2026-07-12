@@ -46,21 +46,21 @@ export default function HeaderBtns({ setCopyList, copyList, asset, setShowForm,s
         </button>
 
       </div>
-      <div className="flex items-center mt-5 md:m-0  ">
-        <div className="flex items-center">
+      <div className="flex gap-3 w-full md:w-auto flex-col md:flex-row mt-5 md:m-0  ">
+        <div className="flex items-center w-full md:w-auto">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search...."
-            className="p-1 bg-white text-black rounded-xl"
+            className="flex-1 p-2 bg-white text-black rounded-xl"
           />
          
         </div>
-        <div ref={menuRef} className="flex justify-around relative mx-6  px-4 py-1 cursor-pointer bg-blue-600  m-2 rounded-[10px] hover:bg-blue-800">
+        <div ref={menuRef} className="relative w-full md:w-auto cursor-pointer bg-blue-600 rounded-[10px] hover:bg-blue-800">
           <button
           onClick={()=>setDisplay(prev=>!prev)}
-          className=" flex items-center gap-1 font-bold transition-all ease-in duration-300 ">
+          className="w-full md:w-auto px-4 py-2 bg-blue-600 rounded-xl flex justify-center items-center gap-1 ">
             
             Sort<RiSortAsc />
           </button>

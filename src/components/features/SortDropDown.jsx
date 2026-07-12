@@ -2,7 +2,7 @@ import { useContext, useRef ,useState} from "react"
 import { AssetContext } from "../../context/AssetContext"
 
 function SortDropDown({setCopyList,setDisplay}){
-    const sortBtns = "p-1 cursor-pointer"
+    const sortBtns = "p-1 cursor-pointer text-left w-full bg-white hover:bg-white/70"
     const {asset, setAssets} = useContext(AssetContext);
     function handleSortDefault(){
         setCopyList(asset);
@@ -18,7 +18,7 @@ function SortDropDown({setCopyList,setDisplay}){
     }
 
     return(
-        <div className="absolute flex flex-col bg-white text-black z-10 top-10 shadow-2xl md:top-10 py-1 px-2 rounded-xl">
+        <div className="absolute flex flex-col w-full md:w-auto bg-white  text-black z-10 top-12 shadow-2xl md:top-12 py-1 px-2 rounded-xl">
             <button className={sortBtns}
             onClick={handleSortDefault}
             >Default</button>
