@@ -17,7 +17,7 @@ function Dashboard() {
       <div
         className="rounded-xl bg-white/10 backdrop-blur-xl p-6 mx-6
             shadow-[3px_3px_35px_2px_rgba(0,0,0,0.3)] border border-white/20 flex 
-            flex-col text-white w-100  md:w-190 lg:w-250"
+            flex-col text-white  max-w-100  md:w-190 lg:w-250"
       >
         <div className="mb-8">
   <h1 className="text-4xl font-bold text-white">
