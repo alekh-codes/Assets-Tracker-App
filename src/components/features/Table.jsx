@@ -5,14 +5,14 @@ import { AssetContext } from "../../context/AssetContext";
 import MobileTable from "./MobileTable";
 import TableContent from "./TableContent";
 import useClickOutside from "../../utils/useClickOutside";
-function Table({ copyList }) {
+function Table({ copyList,setShowForm,setEditingAsset }) {
   const [active, setActive] = useState(null);
   const { asset, setAssets } = useContext(AssetContext);
   const menuRef = useRef(null);
   useClickOutside(menuRef, () => setActive(null));
 
-  const deleteItem = (index) => {
-    setAssets((prev) => prev.filter((item, i) => i !== index));
+  const deleteItem = (id) => {
+    setAssets(prev => prev.filter(item=> item.id !== id))
   };
 
   return (
@@ -33,6 +33,8 @@ function Table({ copyList }) {
           menuRef={menuRef}
           deleteItem={deleteItem}
           setAssets={setAssets}
+          setEditingAsset={setEditingAsset}
+          setShowForm={setShowForm}
         />
       </div>
       <MobileTable
@@ -41,6 +43,8 @@ function Table({ copyList }) {
         active={active}
         menuRef={menuRef}
         deleteItem={deleteItem}
+        setEditingAsset={setEditingAsset}
+          setShowForm={setShowForm}
       />
     </div>
   );

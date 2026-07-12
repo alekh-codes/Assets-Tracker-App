@@ -1,8 +1,7 @@
 import { useContext, useRef ,useState} from "react"
 import { AssetContext } from "../../context/AssetContext"
-import { IoHandLeft } from "react-icons/io5";
 
-function SortDropDown({menuRef,setCopyList}){
+function SortDropDown({setCopyList,setDisplay}){
     const sortBtns = "p-1 cursor-pointer"
     const {asset, setAssets} = useContext(AssetContext);
     function handleSortDefault(){
@@ -19,7 +18,7 @@ function SortDropDown({menuRef,setCopyList}){
     }
 
     return(
-        <div ref={menuRef} className="absolute flex flex-col bg-white text-black z-10 right-13 shadow-2xl md:top-22 p-1 rounded-xl">
+        <div className="absolute flex flex-col bg-white text-black z-10  shadow-2xl md:top-10 py-1 px-2 rounded-xl">
             <button className={sortBtns}
             onClick={handleSortDefault}
             >Default</button>

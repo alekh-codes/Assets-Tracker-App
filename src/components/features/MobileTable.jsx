@@ -1,19 +1,19 @@
 import ActionsBtns from "./ActionsBtns";
 
-const MobileTable = ({ asset, menuRef, deleteItem, active, setActive }) => {
+const MobileTable = ({ asset, menuRef, deleteItem, active, setActive,setShowForm,setEditingAsset }) => {
   return asset.length === 0 ? (
     <h1 className="mt-4 text-white/50 text-center md:hidden">No record added</h1>
   ) : (
     <>
-      <div className="block md:hidden h-100 border-2 p-5 mt-5 rounded-2xl overflow-y-scroll border-white">
-        {asset.map((item, index) => (
+      <div className="block md:hidden max-h-100 border-2 p-5 mt-5 rounded-2xl overflow-y-scroll border-white">
+        {asset.map((item,index) => (
           <div
-            key={index}
+            key={item.id}
             className="flex justify-between border rounded-xl p-4 mb-4 "
           >
             <div className=" ">
               <p>
-                <strong>ID:</strong> PD{index + 1}
+                <strong>ID:</strong> PD-{index+1}
               </p>
               <p>
                 <strong>Asset:</strong> {item.assets}
@@ -26,7 +26,7 @@ const MobileTable = ({ asset, menuRef, deleteItem, active, setActive }) => {
               </p>
 
               <span
-                className={`inline-block mt-2 px-3 py-1 rounded-xl
+                className={`inline-block mt-2 px-3 py-1 rounded-xl 
         ${
           item.status === "Available"
             ? "bg-green-400/15 text-green-400"
@@ -39,11 +39,14 @@ const MobileTable = ({ asset, menuRef, deleteItem, active, setActive }) => {
               </span>
             </div>
             <ActionsBtns
-              index={index}
+            item={item}
+              index={item.id}
               deleteItem={deleteItem}
               active={active}
               setActive={setActive}
               menuRef={menuRef}
+               setEditingAsset={setEditingAsset}
+            setShowForm={setShowForm}
             />
           </div>
         ))}
