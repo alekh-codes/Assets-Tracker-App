@@ -8,9 +8,8 @@ A modern Asset Management Dashboard built with **React**, **Context API**, and *
 - 📋 Display assets in a dynamic table
 - 🎨 Color-coded status badges
   - 🟢 Available
-  - 🟡 In Repair
   - 🔵 Assigned
-  - 🔴 Retired
+  - 🔴 Repair
 - ⚛️ Global state management using React Context API
 - 💻 Responsive and clean UI
 - ✨ Reusable React components
@@ -28,23 +27,46 @@ A modern Asset Management Dashboard built with **React**, **Context API**, and *
 
 ```
 src
-├── assets
-├── components
-│   ├── features
-│   │   ├── AddformBtn.jsx
+│
+├── assets/                   
+│
+├── components/
+│   ├── features/              # Reusable feature components
+│   │   ├── ActionsBtns.jsx
 │   │   ├── AssetsForm.jsx
 │   │   ├── Cards.jsx
-│   │   └── Table.jsx
-│   └── Page
-│       └── Dashboard.jsx
-├── context
-│   └── AssetContext.jsx
-├── utils
+│   │   ├── HeaderBtns.jsx
+│   │   ├── MobileTable.jsx
+│   │   ├── SortDropDown.jsx
+│   │   ├── Table.jsx
+│   │   └── TableContent.jsx
+│   │
+│   └── Page/
+│       └── Dashboard.jsx      # Main Dashboard Page
+│
+├── context/
+│   └── AssetContext.jsx       # Global State Management
+│
+├── utils/                     # Helper Functions
 │   ├── cards.js
-│   └── formInputs.js
-├── App.jsx
-├── main.jsx
-└── index.css
+│   ├── formInputs.js
+│   ├── useClickOutside.js
+│   └── validate.js
+│
+├── App.jsx                    # Root Component
+├── main.jsx                   # Application Entry Point
+└── index.css                  # Global Styles
+
+Root Files
+│
+├── public/
+├── node_modules/
+├── index.html
+├── package.json
+├── package-lock.json
+├── eslint.config.js
+├── .gitignore
+└── README.md
 ```
 
 ## ⚙️ Installation
