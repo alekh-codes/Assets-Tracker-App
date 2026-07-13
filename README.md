@@ -107,10 +107,6 @@ http://localhost:5173
 
 ## 🎯 Upcoming Features
 
-- ✏️ Edit assets
-- 🗑️ Delete assets
-- 🔍 Search & Filter
-- 📊 Dashboard analytics
 - 💾 Local Storage / Database integration
 - 🔐 Authentication
 - 📄 Pagination
